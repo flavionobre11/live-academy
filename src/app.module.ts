@@ -14,6 +14,7 @@ import { CourseSchema } from './Database/schema/course.schema';
 
 // repositorios
 import { CourseRepository } from './Database/repository/course.repository';
+import { UserController } from './Controllers/user/user.controller';
 
 @Module({
   imports: [
@@ -30,7 +31,10 @@ import { CourseRepository } from './Database/repository/course.repository';
       }
     ])
   ],
-  controllers: [CourseController],
+  controllers: [
+    CourseController,
+    UserController
+  ],
   providers: [
     UserService,
     CourseService,
